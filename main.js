@@ -1,7 +1,7 @@
 const puppeteer = require('puppeteer');
 const env = require('./env');
 
-(async () => {
+const main = async () => {
   const browser = await puppeteer.launch({
     // ignoreHTTPSErrors: true,  
     headless: true, // change to true if you want the chrome browser to pop up!
@@ -30,4 +30,6 @@ const env = require('./env');
   // await page.waitFor(5550);
 
   await browser.close();
-})();
+};
+
+main();
